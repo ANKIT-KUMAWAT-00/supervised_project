@@ -1,0 +1,3621 @@
+{
+  "trained_at": "2026-11-10T07:16:53.893081",
+  "training_duration_seconds": 0.26,
+  "dataset_rows": 6205,
+  "features": [
+    "hour",
+    "day_of_week",
+    "month",
+    "is_weekend",
+    "is_holiday",
+    "is_exam_period",
+    "sin_hour",
+    "cos_hour",
+    "sin_dow",
+    "cos_dow",
+    "lag_1h",
+    "lag_2h",
+    "lag_3h",
+    "lag_24h",
+    "rolling_mean_3h",
+    "rolling_mean_6h",
+    "rolling_std_3h"
+  ],
+  "champion_model": "xgboost",
+  "models": {
+    "linear_regression": {
+      "name": "Linear Regression",
+      "mae": 20.44,
+      "rmse": 26.72,
+      "r2": 0.9331,
+      "val_mae": 19.22,
+      "coefficients": {
+        "hour": -3.2716,
+        "day_of_week": 0.9696,
+        "month": -0.0978,
+        "is_weekend": -15.887,
+        "is_holiday": -40.8751,
+        "is_exam_period": 15.515,
+        "sin_hour": -28.8174,
+        "cos_hour": -4.6482,
+        "sin_dow": 6.1497,
+        "cos_dow": 15.5823,
+        "lag_1h": -1.007,
+        "lag_2h": -1.7113,
+        "lag_3h": -1.6552,
+        "lag_24h": 0.4115,
+        "rolling_mean_3h": 4.6642,
+        "rolling_mean_6h": 0.0573,
+        "rolling_std_3h": -0.1202
+      },
+      "intercept": 97.4663
+    },
+    "random_forest": {
+      "name": "Random Forest Regressor",
+      "mae": 15.37,
+      "rmse": 24.35,
+      "r2": 0.9444,
+      "val_mae": 12.81,
+      "feature_importances": {
+        "hour": 0.0072,
+        "day_of_week": 0.0098,
+        "month": 0.0004,
+        "is_weekend": 0.0002,
+        "is_holiday": 0.0015,
+        "is_exam_period": 0.0022,
+        "sin_hour": 0.0033,
+        "cos_hour": 0.0107,
+        "sin_dow": 0.0073,
+        "cos_dow": 0.0069,
+        "lag_1h": 0.1077,
+        "lag_2h": 0.0013,
+        "lag_3h": 0.0022,
+        "lag_24h": 0.827,
+        "rolling_mean_3h": 0.0074,
+        "rolling_mean_6h": 0.0033,
+        "rolling_std_3h": 0.0015
+      }
+    },
+    "xgboost": {
+      "name": "XGBoost Regressor",
+      "mae": 14.66,
+      "rmse": 22.32,
+      "r2": 0.9533,
+      "val_mae": 12.69,
+      "feature_importances": {
+        "hour": 0.019200000911951065,
+        "day_of_week": 0.027699999511241913,
+        "month": 0.000699999975040555,
+        "is_weekend": 0.0,
+        "is_holiday": 0.01269999984651804,
+        "is_exam_period": 0.012400000356137753,
+        "sin_hour": 0.007199999876320362,
+        "cos_hour": 0.006800000090152025,
+        "sin_dow": 0.014299999922513962,
+        "cos_dow": 0.022099999710917473,
+        "lag_1h": 0.11420000344514847,
+        "lag_2h": 0.001500000013038516,
+        "lag_3h": 0.0031999999191612005,
+        "lag_24h": 0.7314000129699707,
+        "rolling_mean_3h": 0.01899999938905239,
+        "rolling_mean_6h": 0.005499999970197678,
+        "rolling_std_3h": 0.002099999925121665
+      }
+    }
+  },
+  "actual_vs_predicted": [
+    {
+      "timestamp": "2025-12-29 10:00",
+      "actual": 215,
+      "linear_regression": 201,
+      "random_forest": 231,
+      "xgboost": 232,
+      "residual_xgb": -17
+    },
+    {
+      "timestamp": "2025-12-29 11:00",
+      "actual": 274,
+      "linear_regression": 240,
+      "random_forest": 268,
+      "xgboost": 268,
+      "residual_xgb": 6
+    },
+    {
+      "timestamp": "2025-12-29 12:00",
+      "actual": 230,
+      "linear_regression": 257,
+      "random_forest": 256,
+      "xgboost": 258,
+      "residual_xgb": -28
+    },
+    {
+      "timestamp": "2025-12-29 13:00",
+      "actual": 289,
+      "linear_regression": 241,
+      "random_forest": 289,
+      "xgboost": 284,
+      "residual_xgb": 5
+    },
+    {
+      "timestamp": "2025-12-29 14:00",
+      "actual": 327,
+      "linear_regression": 288,
+      "random_forest": 311,
+      "xgboost": 313,
+      "residual_xgb": 14
+    },
+    {
+      "timestamp": "2025-12-29 15:00",
+      "actual": 315,
+      "linear_regression": 307,
+      "random_forest": 325,
+      "xgboost": 322,
+      "residual_xgb": -7
+    },
+    {
+      "timestamp": "2025-12-29 16:00",
+      "actual": 301,
+      "linear_regression": 292,
+      "random_forest": 323,
+      "xgboost": 318,
+      "residual_xgb": -17
+    },
+    {
+      "timestamp": "2025-12-29 17:00",
+      "actual": 320,
+      "linear_regression": 273,
+      "random_forest": 306,
+      "xgboost": 298,
+      "residual_xgb": 22
+    },
+    {
+      "timestamp": "2025-12-29 18:00",
+      "actual": 236,
+      "linear_regression": 261,
+      "random_forest": 242,
+      "xgboost": 235,
+      "residual_xgb": 1
+    },
+    {
+      "timestamp": "2025-12-29 19:00",
+      "actual": 310,
+      "linear_regression": 229,
+      "random_forest": 294,
+      "xgboost": 292,
+      "residual_xgb": 18
+    },
+    {
+      "timestamp": "2025-12-29 20:00",
+      "actual": 306,
+      "linear_regression": 287,
+      "random_forest": 306,
+      "xgboost": 310,
+      "residual_xgb": -4
+    },
+    {
+      "timestamp": "2025-12-29 21:00",
+      "actual": 260,
+      "linear_regression": 244,
+      "random_forest": 261,
+      "xgboost": 261,
+      "residual_xgb": -1
+    },
+    {
+      "timestamp": "2025-12-29 22:00",
+      "actual": 174,
+      "linear_regression": 174,
+      "random_forest": 168,
+      "xgboost": 169,
+      "residual_xgb": 5
+    },
+    {
+      "timestamp": "2025-12-29 23:00",
+      "actual": 58,
+      "linear_regression": 87,
+      "random_forest": 72,
+      "xgboost": 71,
+      "residual_xgb": -13
+    },
+    {
+      "timestamp": "2025-12-30 07:00",
+      "actual": 46,
+      "linear_regression": 63,
+      "random_forest": 39,
+      "xgboost": 51,
+      "residual_xgb": -5
+    },
+    {
+      "timestamp": "2025-12-30 08:00",
+      "actual": 87,
+      "linear_regression": 103,
+      "random_forest": 88,
+      "xgboost": 92,
+      "residual_xgb": -5
+    },
+    {
+      "timestamp": "2025-12-30 09:00",
+      "actual": 147,
+      "linear_regression": 170,
+      "random_forest": 162,
+      "xgboost": 167,
+      "residual_xgb": -20
+    },
+    {
+      "timestamp": "2025-12-30 10:00",
+      "actual": 244,
+      "linear_regression": 221,
+      "random_forest": 238,
+      "xgboost": 238,
+      "residual_xgb": 6
+    },
+    {
+      "timestamp": "2025-12-30 11:00",
+      "actual": 283,
+      "linear_regression": 285,
+      "random_forest": 284,
+      "xgboost": 286,
+      "residual_xgb": -3
+    },
+    {
+      "timestamp": "2025-12-30 12:00",
+      "actual": 262,
+      "linear_regression": 274,
+      "random_forest": 258,
+      "xgboost": 264,
+      "residual_xgb": -2
+    },
+    {
+      "timestamp": "2025-12-30 13:00",
+      "actual": 284,
+      "linear_regression": 283,
+      "random_forest": 294,
+      "xgboost": 292,
+      "residual_xgb": -8
+    },
+    {
+      "timestamp": "2025-12-30 14:00",
+      "actual": 343,
+      "linear_regression": 316,
+      "random_forest": 318,
+      "xgboost": 319,
+      "residual_xgb": 24
+    },
+    {
+      "timestamp": "2025-12-30 15:00",
+      "actual": 343,
+      "linear_regression": 343,
+      "random_forest": 338,
+      "xgboost": 335,
+      "residual_xgb": 8
+    },
+    {
+      "timestamp": "2025-12-30 16:00",
+      "actual": 343,
+      "linear_regression": 329,
+      "random_forest": 326,
+      "xgboost": 330,
+      "residual_xgb": 13
+    },
+    {
+      "timestamp": "2025-12-30 17:00",
+      "actual": 308,
+      "linear_regression": 334,
+      "random_forest": 300,
+      "xgboost": 317,
+      "residual_xgb": -9
+    },
+    {
+      "timestamp": "2025-12-30 18:00",
+      "actual": 233,
+      "linear_regression": 275,
+      "random_forest": 257,
+      "xgboost": 256,
+      "residual_xgb": -23
+    },
+    {
+      "timestamp": "2025-12-30 19:00",
+      "actual": 336,
+      "linear_regression": 260,
+      "random_forest": 304,
+      "xgboost": 303,
+      "residual_xgb": 33
+    },
+    {
+      "timestamp": "2025-12-30 20:00",
+      "actual": 323,
+      "linear_regression": 323,
+      "random_forest": 320,
+      "xgboost": 322,
+      "residual_xgb": 1
+    },
+    {
+      "timestamp": "2025-12-30 21:00",
+      "actual": 265,
+      "linear_regression": 279,
+      "random_forest": 273,
+      "xgboost": 271,
+      "residual_xgb": -6
+    },
+    {
+      "timestamp": "2025-12-30 22:00",
+      "actual": 182,
+      "linear_regression": 195,
+      "random_forest": 175,
+      "xgboost": 179,
+      "residual_xgb": 3
+    },
+    {
+      "timestamp": "2025-12-30 23:00",
+      "actual": 90,
+      "linear_regression": 96,
+      "random_forest": 70,
+      "xgboost": 73,
+      "residual_xgb": 17
+    },
+    {
+      "timestamp": "2025-12-31 07:00",
+      "actual": 43,
+      "linear_regression": 67,
+      "random_forest": 42,
+      "xgboost": 44,
+      "residual_xgb": -1
+    },
+    {
+      "timestamp": "2025-12-31 08:00",
+      "actual": 107,
+      "linear_regression": 82,
+      "random_forest": 87,
+      "xgboost": 87,
+      "residual_xgb": 20
+    },
+    {
+      "timestamp": "2025-12-31 09:00",
+      "actual": 176,
+      "linear_regression": 163,
+      "random_forest": 161,
+      "xgboost": 159,
+      "residual_xgb": 17
+    },
+    {
+      "timestamp": "2025-12-31 10:00",
+      "actual": 217,
+      "linear_regression": 234,
+      "random_forest": 238,
+      "xgboost": 237,
+      "residual_xgb": -20
+    },
+    {
+      "timestamp": "2025-12-31 11:00",
+      "actual": 269,
+      "linear_regression": 260,
+      "random_forest": 274,
+      "xgboost": 269,
+      "residual_xgb": 0
+    },
+    {
+      "timestamp": "2025-12-31 12:00",
+      "actual": 270,
+      "linear_regression": 273,
+      "random_forest": 250,
+      "xgboost": 245,
+      "residual_xgb": 25
+    },
+    {
+      "timestamp": "2025-12-31 13:00",
+      "actual": 255,
+      "linear_regression": 278,
+      "random_forest": 289,
+      "xgboost": 287,
+      "residual_xgb": -32
+    },
+    {
+      "timestamp": "2025-12-31 14:00",
+      "actual": 319,
+      "linear_regression": 296,
+      "random_forest": 304,
+      "xgboost": 308,
+      "residual_xgb": 11
+    },
+    {
+      "timestamp": "2025-12-31 15:00",
+      "actual": 319,
+      "linear_regression": 335,
+      "random_forest": 331,
+      "xgboost": 327,
+      "residual_xgb": -8
+    },
+    {
+      "timestamp": "2025-12-31 16:00",
+      "actual": 322,
+      "linear_regression": 327,
+      "random_forest": 320,
+      "xgboost": 323,
+      "residual_xgb": -1
+    },
+    {
+      "timestamp": "2025-12-31 17:00",
+      "actual": 299,
+      "linear_regression": 312,
+      "random_forest": 307,
+      "xgboost": 303,
+      "residual_xgb": -4
+    },
+    {
+      "timestamp": "2025-12-31 18:00",
+      "actual": 245,
+      "linear_regression": 263,
+      "random_forest": 249,
+      "xgboost": 243,
+      "residual_xgb": 2
+    },
+    {
+      "timestamp": "2025-12-31 19:00",
+      "actual": 292,
+      "linear_regression": 271,
+      "random_forest": 296,
+      "xgboost": 302,
+      "residual_xgb": -10
+    },
+    {
+      "timestamp": "2025-12-31 20:00",
+      "actual": 299,
+      "linear_regression": 296,
+      "random_forest": 316,
+      "xgboost": 313,
+      "residual_xgb": -14
+    },
+    {
+      "timestamp": "2025-12-31 21:00",
+      "actual": 300,
+      "linear_regression": 265,
+      "random_forest": 262,
+      "xgboost": 263,
+      "residual_xgb": 37
+    },
+    {
+      "timestamp": "2025-12-31 22:00",
+      "actual": 198,
+      "linear_regression": 218,
+      "random_forest": 176,
+      "xgboost": 174,
+      "residual_xgb": 24
+    },
+    {
+      "timestamp": "2025-12-31 23:00",
+      "actual": 55,
+      "linear_regression": 105,
+      "random_forest": 73,
+      "xgboost": 76,
+      "residual_xgb": -21
+    }
+  ],
+  "trees_3d": [
+    {
+      "tree_index": 0,
+      "root_x": -12.0,
+      "nodes": [
+        {
+          "id": 0,
+          "parent_id": null,
+          "depth": 0,
+          "x": -12.0,
+          "y": 6.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_24h",
+          "threshold": 147.5,
+          "samples": 2730,
+          "impurity": 11962.1158
+        },
+        {
+          "id": 1,
+          "parent_id": 0,
+          "depth": 1,
+          "x": -15.5,
+          "y": 4.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_1h",
+          "threshold": 189.5,
+          "samples": 1244,
+          "impurity": 1807.3376
+        },
+        {
+          "id": 2,
+          "parent_id": 1,
+          "depth": 2,
+          "x": -17.25,
+          "y": 2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_24h",
+          "threshold": 100.5,
+          "samples": 1179,
+          "impurity": 995.7195
+        },
+        {
+          "id": 3,
+          "parent_id": 2,
+          "depth": 3,
+          "x": -18.42,
+          "y": 0.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_24h",
+          "threshold": 53.5,
+          "samples": 1079,
+          "impurity": 583.6577
+        },
+        {
+          "id": 4,
+          "parent_id": 3,
+          "depth": 4,
+          "x": -19.29,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_1h",
+          "threshold": 34.5,
+          "samples": 517,
+          "impurity": 441.6364
+        },
+        {
+          "id": 65,
+          "parent_id": 3,
+          "depth": 4,
+          "x": -17.54,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "day_of_week",
+          "threshold": 2.5,
+          "samples": 562,
+          "impurity": 427.2826
+        },
+        {
+          "id": 124,
+          "parent_id": 2,
+          "depth": 3,
+          "x": -16.08,
+          "y": 0.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_1h",
+          "threshold": 69.5,
+          "samples": 100,
+          "impurity": 1628.8618
+        },
+        {
+          "id": 125,
+          "parent_id": 124,
+          "depth": 4,
+          "x": -16.96,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "is_holiday",
+          "threshold": 0.5,
+          "samples": 51,
+          "impurity": 568.3535
+        },
+        {
+          "id": 166,
+          "parent_id": 124,
+          "depth": 4,
+          "x": -15.21,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "cos_hour",
+          "threshold": -0.6,
+          "samples": 49,
+          "impurity": 1647.628
+        },
+        {
+          "id": 203,
+          "parent_id": 1,
+          "depth": 2,
+          "x": -13.75,
+          "y": 2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "hour",
+          "threshold": 21.5,
+          "samples": 65,
+          "impurity": 5358.3479
+        },
+        {
+          "id": 204,
+          "parent_id": 203,
+          "depth": 3,
+          "x": -14.92,
+          "y": 0.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "rolling_mean_3h",
+          "threshold": 248.67,
+          "samples": 19,
+          "impurity": 2037.7004
+        },
+        {
+          "id": 205,
+          "parent_id": 204,
+          "depth": 4,
+          "x": -15.79,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "day_of_week",
+          "threshold": 4.5,
+          "samples": 8,
+          "impurity": 881.3889
+        },
+        {
+          "id": 220,
+          "parent_id": 204,
+          "depth": 4,
+          "x": -14.04,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "cos_hour",
+          "threshold": -0.38,
+          "samples": 11,
+          "impurity": 512.9273
+        },
+        {
+          "id": 241,
+          "parent_id": 203,
+          "depth": 3,
+          "x": -12.58,
+          "y": 0.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "sin_hour",
+          "threshold": -0.38,
+          "samples": 46,
+          "impurity": 1350.9562
+        },
+        {
+          "id": 242,
+          "parent_id": 241,
+          "depth": 4,
+          "x": -13.46,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_1h",
+          "threshold": 247.0,
+          "samples": 29,
+          "impurity": 725.1216
+        },
+        {
+          "id": 275,
+          "parent_id": 241,
+          "depth": 4,
+          "x": -11.71,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "rolling_mean_3h",
+          "threshold": 306.0,
+          "samples": 17,
+          "impurity": 271.1553
+        },
+        {
+          "id": 306,
+          "parent_id": 0,
+          "depth": 1,
+          "x": -8.5,
+          "y": 4.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_1h",
+          "threshold": 233.5,
+          "samples": 1486,
+          "impurity": 3914.5594
+        },
+        {
+          "id": 307,
+          "parent_id": 306,
+          "depth": 2,
+          "x": -10.25,
+          "y": 2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "rolling_mean_3h",
+          "threshold": 77.17,
+          "samples": 542,
+          "impurity": 2168.2706
+        },
+        {
+          "id": 308,
+          "parent_id": 307,
+          "depth": 3,
+          "x": -11.42,
+          "y": 0.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "hour",
+          "threshold": 10.5,
+          "samples": 82,
+          "impurity": 1418.6738
+        },
+        {
+          "id": 309,
+          "parent_id": 308,
+          "depth": 4,
+          "x": -12.29,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "cos_dow",
+          "threshold": 0.2,
+          "samples": 73,
+          "impurity": 424.0099
+        },
+        {
+          "id": 352,
+          "parent_id": 308,
+          "depth": 4,
+          "x": -10.54,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_24h",
+          "threshold": 180.0,
+          "samples": 9,
+          "impurity": 279.7773
+        },
+        {
+          "id": 369,
+          "parent_id": 307,
+          "depth": 3,
+          "x": -9.08,
+          "y": 0.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_24h",
+          "threshold": 255.5,
+          "samples": 460,
+          "impurity": 1562.4731
+        },
+        {
+          "id": 370,
+          "parent_id": 369,
+          "depth": 4,
+          "x": -9.96,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "cos_hour",
+          "threshold": 0.6,
+          "samples": 312,
+          "impurity": 1149.8824
+        },
+        {
+          "id": 427,
+          "parent_id": 369,
+          "depth": 4,
+          "x": -8.21,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "sin_dow",
+          "threshold": -0.22,
+          "samples": 148,
+          "impurity": 1270.6063
+        },
+        {
+          "id": 480,
+          "parent_id": 306,
+          "depth": 2,
+          "x": -6.75,
+          "y": 2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_24h",
+          "threshold": 283.5,
+          "samples": 944,
+          "impurity": 2355.0016
+        },
+        {
+          "id": 481,
+          "parent_id": 480,
+          "depth": 3,
+          "x": -7.92,
+          "y": 0.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "cos_hour",
+          "threshold": 0.79,
+          "samples": 451,
+          "impurity": 2216.7593
+        },
+        {
+          "id": 482,
+          "parent_id": 481,
+          "depth": 4,
+          "x": -8.79,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "day_of_week",
+          "threshold": 1.5,
+          "samples": 387,
+          "impurity": 1521.1302
+        },
+        {
+          "id": 539,
+          "parent_id": 481,
+          "depth": 4,
+          "x": -7.04,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "rolling_mean_6h",
+          "threshold": 329.92,
+          "samples": 64,
+          "impurity": 1291.0926
+        },
+        {
+          "id": 588,
+          "parent_id": 480,
+          "depth": 3,
+          "x": -5.58,
+          "y": 0.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_1h",
+          "threshold": 274.0,
+          "samples": 493,
+          "impurity": 1005.5421
+        },
+        {
+          "id": 589,
+          "parent_id": 588,
+          "depth": 4,
+          "x": -6.46,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "day_of_week",
+          "threshold": 3.5,
+          "samples": 114,
+          "impurity": 1001.3648
+        },
+        {
+          "id": 630,
+          "parent_id": 588,
+          "depth": 4,
+          "x": -4.71,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_1h",
+          "threshold": 340.5,
+          "samples": 379,
+          "impurity": 523.2125
+        }
+      ]
+    },
+    {
+      "tree_index": 1,
+      "root_x": -4.0,
+      "nodes": [
+        {
+          "id": 0,
+          "parent_id": null,
+          "depth": 0,
+          "x": -4.0,
+          "y": 6.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_24h",
+          "threshold": 141.5,
+          "samples": 2762,
+          "impurity": 12067.3139
+        },
+        {
+          "id": 1,
+          "parent_id": 0,
+          "depth": 1,
+          "x": -7.5,
+          "y": 4.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_1h",
+          "threshold": 227.5,
+          "samples": 1228,
+          "impurity": 1727.5592
+        },
+        {
+          "id": 2,
+          "parent_id": 1,
+          "depth": 2,
+          "x": -9.25,
+          "y": 2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_24h",
+          "threshold": 85.5,
+          "samples": 1191,
+          "impurity": 1021.5285
+        },
+        {
+          "id": 3,
+          "parent_id": 2,
+          "depth": 3,
+          "x": -10.42,
+          "y": 0.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_24h",
+          "threshold": 38.5,
+          "samples": 1002,
+          "impurity": 635.1319
+        },
+        {
+          "id": 4,
+          "parent_id": 3,
+          "depth": 4,
+          "x": -11.29,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_1h",
+          "threshold": 46.5,
+          "samples": 320,
+          "impurity": 383.4697
+        },
+        {
+          "id": 65,
+          "parent_id": 3,
+          "depth": 4,
+          "x": -9.54,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "day_of_week",
+          "threshold": 3.5,
+          "samples": 682,
+          "impurity": 549.3007
+        },
+        {
+          "id": 126,
+          "parent_id": 2,
+          "depth": 3,
+          "x": -8.08,
+          "y": 0.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_24h",
+          "threshold": 112.5,
+          "samples": 189,
+          "impurity": 1268.3647
+        },
+        {
+          "id": 127,
+          "parent_id": 126,
+          "depth": 4,
+          "x": -8.96,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "sin_hour",
+          "threshold": 0.48,
+          "samples": 128,
+          "impurity": 691.5576
+        },
+        {
+          "id": 176,
+          "parent_id": 126,
+          "depth": 4,
+          "x": -7.21,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "cos_dow",
+          "threshold": 0.2,
+          "samples": 61,
+          "impurity": 1080.3916
+        },
+        {
+          "id": 207,
+          "parent_id": 1,
+          "depth": 2,
+          "x": -5.75,
+          "y": 2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "cos_hour",
+          "threshold": 0.79,
+          "samples": 37,
+          "impurity": 7451.7613
+        },
+        {
+          "id": 208,
+          "parent_id": 207,
+          "depth": 3,
+          "x": -6.92,
+          "y": 0.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_3h",
+          "threshold": 246.5,
+          "samples": 15,
+          "impurity": 1107.6416
+        },
+        {
+          "id": 209,
+          "parent_id": 208,
+          "depth": 4,
+          "x": -7.79,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "is_weekend",
+          "threshold": 0.5,
+          "samples": 7,
+          "impurity": 739.9506
+        },
+        {
+          "id": 222,
+          "parent_id": 208,
+          "depth": 4,
+          "x": -6.04,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "rolling_std_3h",
+          "threshold": 12.9,
+          "samples": 8,
+          "impurity": 206.6875
+        },
+        {
+          "id": 237,
+          "parent_id": 207,
+          "depth": 3,
+          "x": -4.58,
+          "y": 0.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "rolling_mean_6h",
+          "threshold": 311.0,
+          "samples": 22,
+          "impurity": 949.0597
+        },
+        {
+          "id": 238,
+          "parent_id": 237,
+          "depth": 4,
+          "x": -5.46,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_3h",
+          "threshold": 289.0,
+          "samples": 9,
+          "impurity": 266.9822
+        },
+        {
+          "id": 255,
+          "parent_id": 237,
+          "depth": 4,
+          "x": -3.71,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "rolling_mean_3h",
+          "threshold": 310.67,
+          "samples": 13,
+          "impurity": 196.74
+        },
+        {
+          "id": 276,
+          "parent_id": 0,
+          "depth": 1,
+          "x": -0.5,
+          "y": 4.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_1h",
+          "threshold": 228.5,
+          "samples": 1534,
+          "impurity": 4003.7913
+        },
+        {
+          "id": 277,
+          "parent_id": 276,
+          "depth": 2,
+          "x": -2.25,
+          "y": 2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_1h",
+          "threshold": 115.5,
+          "samples": 547,
+          "impurity": 2073.0069
+        },
+        {
+          "id": 278,
+          "parent_id": 277,
+          "depth": 3,
+          "x": -3.42,
+          "y": 0.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "is_holiday",
+          "threshold": 0.5,
+          "samples": 91,
+          "impurity": 1533.5263
+        },
+        {
+          "id": 279,
+          "parent_id": 278,
+          "depth": 4,
+          "x": -4.29,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_24h",
+          "threshold": 218.5,
+          "samples": 84,
+          "impurity": 755.3745
+        },
+        {
+          "id": 318,
+          "parent_id": 278,
+          "depth": 4,
+          "x": -2.54,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_2h",
+          "threshold": 75.0,
+          "samples": 7,
+          "impurity": 291.9172
+        },
+        {
+          "id": 331,
+          "parent_id": 277,
+          "depth": 3,
+          "x": -1.08,
+          "y": 0.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "sin_dow",
+          "threshold": -0.22,
+          "samples": 456,
+          "impurity": 1500.5569
+        },
+        {
+          "id": 332,
+          "parent_id": 331,
+          "depth": 4,
+          "x": -1.96,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_24h",
+          "threshold": 266.0,
+          "samples": 362,
+          "impurity": 1069.6985
+        },
+        {
+          "id": 389,
+          "parent_id": 331,
+          "depth": 4,
+          "x": -0.21,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "rolling_mean_3h",
+          "threshold": 124.17,
+          "samples": 94,
+          "impurity": 1174.2515
+        },
+        {
+          "id": 436,
+          "parent_id": 276,
+          "depth": 2,
+          "x": 1.25,
+          "y": 2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_1h",
+          "threshold": 308.5,
+          "samples": 987,
+          "impurity": 2412.6563
+        },
+        {
+          "id": 437,
+          "parent_id": 436,
+          "depth": 3,
+          "x": 0.08,
+          "y": 0.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "cos_hour",
+          "threshold": 0.79,
+          "samples": 589,
+          "impurity": 2021.8737
+        },
+        {
+          "id": 438,
+          "parent_id": 437,
+          "depth": 4,
+          "x": -0.79,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "sin_dow",
+          "threshold": -0.22,
+          "samples": 548,
+          "impurity": 1521.6083
+        },
+        {
+          "id": 499,
+          "parent_id": 437,
+          "depth": 4,
+          "x": 0.96,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "rolling_mean_6h",
+          "threshold": 290.58,
+          "samples": 41,
+          "impurity": 294.1385
+        },
+        {
+          "id": 546,
+          "parent_id": 436,
+          "depth": 3,
+          "x": 2.42,
+          "y": 0.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "hour",
+          "threshold": 20.5,
+          "samples": 398,
+          "impurity": 987.1108
+        },
+        {
+          "id": 547,
+          "parent_id": 546,
+          "depth": 4,
+          "x": 1.54,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_1h",
+          "threshold": 332.5,
+          "samples": 337,
+          "impurity": 551.1712
+        },
+        {
+          "id": 604,
+          "parent_id": 546,
+          "depth": 4,
+          "x": 3.29,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_24h",
+          "threshold": 323.0,
+          "samples": 61,
+          "impurity": 1371.7026
+        }
+      ]
+    },
+    {
+      "tree_index": 2,
+      "root_x": 4.0,
+      "nodes": [
+        {
+          "id": 0,
+          "parent_id": null,
+          "depth": 0,
+          "x": 4.0,
+          "y": 6.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_24h",
+          "threshold": 135.5,
+          "samples": 2731,
+          "impurity": 12170.7646
+        },
+        {
+          "id": 1,
+          "parent_id": 0,
+          "depth": 1,
+          "x": 0.5,
+          "y": 4.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_1h",
+          "threshold": 227.5,
+          "samples": 1216,
+          "impurity": 1660.218
+        },
+        {
+          "id": 2,
+          "parent_id": 1,
+          "depth": 2,
+          "x": -1.25,
+          "y": 2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_24h",
+          "threshold": 60.5,
+          "samples": 1179,
+          "impurity": 879.0904
+        },
+        {
+          "id": 3,
+          "parent_id": 2,
+          "depth": 3,
+          "x": -2.42,
+          "y": 0.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_24h",
+          "threshold": 33.5,
+          "samples": 647,
+          "impurity": 466.406
+        },
+        {
+          "id": 4,
+          "parent_id": 3,
+          "depth": 4,
+          "x": -3.29,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_1h",
+          "threshold": 33.5,
+          "samples": 263,
+          "impurity": 296.9416
+        },
+        {
+          "id": 65,
+          "parent_id": 3,
+          "depth": 4,
+          "x": -1.54,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "cos_dow",
+          "threshold": 0.81,
+          "samples": 384,
+          "impurity": 409.0703
+        },
+        {
+          "id": 124,
+          "parent_id": 2,
+          "depth": 3,
+          "x": -0.08,
+          "y": 0.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_24h",
+          "threshold": 101.5,
+          "samples": 532,
+          "impurity": 830.1275
+        },
+        {
+          "id": 125,
+          "parent_id": 124,
+          "depth": 4,
+          "x": -0.96,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "sin_dow",
+          "threshold": -0.22,
+          "samples": 434,
+          "impurity": 467.6297
+        },
+        {
+          "id": 178,
+          "parent_id": 124,
+          "depth": 4,
+          "x": 0.79,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "cos_dow",
+          "threshold": 0.2,
+          "samples": 98,
+          "impurity": 947.7013
+        },
+        {
+          "id": 229,
+          "parent_id": 1,
+          "depth": 2,
+          "x": 2.25,
+          "y": 2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "cos_hour",
+          "threshold": 0.79,
+          "samples": 37,
+          "impurity": 7966.0242
+        },
+        {
+          "id": 230,
+          "parent_id": 229,
+          "depth": 3,
+          "x": 1.08,
+          "y": 0.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_1h",
+          "threshold": 302.5,
+          "samples": 15,
+          "impurity": 1397.8891
+        },
+        {
+          "id": 231,
+          "parent_id": 230,
+          "depth": 4,
+          "x": 0.21,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_3h",
+          "threshold": 330.5,
+          "samples": 11,
+          "impurity": 998.4429
+        },
+        {
+          "id": 250,
+          "parent_id": 230,
+          "depth": 4,
+          "x": 1.96,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "rolling_mean_6h",
+          "threshold": 241.75,
+          "samples": 4,
+          "impurity": 90.9136
+        },
+        {
+          "id": 257,
+          "parent_id": 229,
+          "depth": 3,
+          "x": 3.42,
+          "y": 0.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "sin_hour",
+          "threshold": -0.38,
+          "samples": 22,
+          "impurity": 1599.1122
+        },
+        {
+          "id": 258,
+          "parent_id": 257,
+          "depth": 4,
+          "x": 2.54,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "rolling_std_3h",
+          "threshold": 7.52,
+          "samples": 11,
+          "impurity": 703.5621
+        },
+        {
+          "id": 271,
+          "parent_id": 257,
+          "depth": 4,
+          "x": 4.29,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_24h",
+          "threshold": 95.0,
+          "samples": 11,
+          "impurity": 314.4637
+        },
+        {
+          "id": 290,
+          "parent_id": 0,
+          "depth": 1,
+          "x": 7.5,
+          "y": 4.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_1h",
+          "threshold": 278.5,
+          "samples": 1515,
+          "impurity": 3966.5934
+        },
+        {
+          "id": 291,
+          "parent_id": 290,
+          "depth": 2,
+          "x": 5.75,
+          "y": 2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_24h",
+          "threshold": 209.5,
+          "samples": 924,
+          "impurity": 2708.4011
+        },
+        {
+          "id": 292,
+          "parent_id": 291,
+          "depth": 3,
+          "x": 4.58,
+          "y": 0.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "cos_dow",
+          "threshold": 0.2,
+          "samples": 327,
+          "impurity": 2085.9526
+        },
+        {
+          "id": 293,
+          "parent_id": 292,
+          "depth": 4,
+          "x": 3.71,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_24h",
+          "threshold": 169.5,
+          "samples": 135,
+          "impurity": 515.9102
+        },
+        {
+          "id": 346,
+          "parent_id": 292,
+          "depth": 4,
+          "x": 5.46,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_1h",
+          "threshold": 127.5,
+          "samples": 192,
+          "impurity": 1926.1689
+        },
+        {
+          "id": 397,
+          "parent_id": 291,
+          "depth": 3,
+          "x": 6.92,
+          "y": 0.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "sin_dow",
+          "threshold": -0.22,
+          "samples": 597,
+          "impurity": 1822.7243
+        },
+        {
+          "id": 398,
+          "parent_id": 397,
+          "depth": 4,
+          "x": 6.04,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_24h",
+          "threshold": 265.5,
+          "samples": 357,
+          "impurity": 1176.5901
+        },
+        {
+          "id": 455,
+          "parent_id": 397,
+          "depth": 4,
+          "x": 7.79,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "rolling_mean_3h",
+          "threshold": 120.83,
+          "samples": 240,
+          "impurity": 1061.9448
+        },
+        {
+          "id": 506,
+          "parent_id": 290,
+          "depth": 2,
+          "x": 9.25,
+          "y": 2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_24h",
+          "threshold": 283.0,
+          "samples": 591,
+          "impurity": 1554.4526
+        },
+        {
+          "id": 507,
+          "parent_id": 506,
+          "depth": 3,
+          "x": 8.08,
+          "y": 0.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "day_of_week",
+          "threshold": 0.5,
+          "samples": 224,
+          "impurity": 1776.5273
+        },
+        {
+          "id": 508,
+          "parent_id": 507,
+          "depth": 4,
+          "x": 7.21,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_24h",
+          "threshold": 209.5,
+          "samples": 104,
+          "impurity": 1079.8331
+        },
+        {
+          "id": 545,
+          "parent_id": 507,
+          "depth": 4,
+          "x": 8.96,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_24h",
+          "threshold": 194.5,
+          "samples": 120,
+          "impurity": 1149.6626
+        },
+        {
+          "id": 590,
+          "parent_id": 506,
+          "depth": 3,
+          "x": 10.42,
+          "y": 0.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_1h",
+          "threshold": 335.5,
+          "samples": 367,
+          "impurity": 564.9759
+        },
+        {
+          "id": 591,
+          "parent_id": 590,
+          "depth": 4,
+          "x": 9.54,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "cos_hour",
+          "threshold": -0.6,
+          "samples": 182,
+          "impurity": 645.9831
+        },
+        {
+          "id": 642,
+          "parent_id": 590,
+          "depth": 4,
+          "x": 11.29,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "is_exam_period",
+          "threshold": 0.5,
+          "samples": 185,
+          "impurity": 158.1861
+        }
+      ]
+    },
+    {
+      "tree_index": 3,
+      "root_x": 12.0,
+      "nodes": [
+        {
+          "id": 0,
+          "parent_id": null,
+          "depth": 0,
+          "x": 12.0,
+          "y": 6.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_24h",
+          "threshold": 152.5,
+          "samples": 2770,
+          "impurity": 12177.5519
+        },
+        {
+          "id": 1,
+          "parent_id": 0,
+          "depth": 1,
+          "x": 8.5,
+          "y": 4.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_24h",
+          "threshold": 96.5,
+          "samples": 1307,
+          "impurity": 1892.9717
+        },
+        {
+          "id": 2,
+          "parent_id": 1,
+          "depth": 2,
+          "x": 6.75,
+          "y": 2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_1h",
+          "threshold": 227.5,
+          "samples": 1116,
+          "impurity": 1210.7694
+        },
+        {
+          "id": 3,
+          "parent_id": 2,
+          "depth": 3,
+          "x": 5.58,
+          "y": 0.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_24h",
+          "threshold": 53.5,
+          "samples": 1095,
+          "impurity": 632.3812
+        },
+        {
+          "id": 4,
+          "parent_id": 3,
+          "depth": 4,
+          "x": 4.71,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_1h",
+          "threshold": 33.5,
+          "samples": 539,
+          "impurity": 472.6286
+        },
+        {
+          "id": 67,
+          "parent_id": 3,
+          "depth": 4,
+          "x": 6.46,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "sin_dow",
+          "threshold": -0.22,
+          "samples": 556,
+          "impurity": 474.049
+        },
+        {
+          "id": 128,
+          "parent_id": 2,
+          "depth": 3,
+          "x": 7.92,
+          "y": 0.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "cos_hour",
+          "threshold": 0.79,
+          "samples": 21,
+          "impurity": 8700.4261
+        },
+        {
+          "id": 129,
+          "parent_id": 128,
+          "depth": 4,
+          "x": 7.04,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "sin_hour",
+          "threshold": -0.13,
+          "samples": 12,
+          "impurity": 977.0
+        },
+        {
+          "id": 152,
+          "parent_id": 128,
+          "depth": 4,
+          "x": 8.79,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "sin_hour",
+          "threshold": -0.38,
+          "samples": 9,
+          "impurity": 321.9822
+        },
+        {
+          "id": 165,
+          "parent_id": 1,
+          "depth": 2,
+          "x": 10.25,
+          "y": 2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "is_holiday",
+          "threshold": 0.5,
+          "samples": 191,
+          "impurity": 1786.8484
+        },
+        {
+          "id": 166,
+          "parent_id": 165,
+          "depth": 3,
+          "x": 9.08,
+          "y": 0.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_1h",
+          "threshold": 68.5,
+          "samples": 171,
+          "impurity": 1458.3768
+        },
+        {
+          "id": 167,
+          "parent_id": 166,
+          "depth": 4,
+          "x": 8.21,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "rolling_std_3h",
+          "threshold": 28.97,
+          "samples": 54,
+          "impurity": 347.9228
+        },
+        {
+          "id": 218,
+          "parent_id": 166,
+          "depth": 4,
+          "x": 9.96,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "cos_hour",
+          "threshold": 0.92,
+          "samples": 117,
+          "impurity": 1445.5426
+        },
+        {
+          "id": 259,
+          "parent_id": 165,
+          "depth": 3,
+          "x": 11.42,
+          "y": 0.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_24h",
+          "threshold": 104.5,
+          "samples": 20,
+          "impurity": 290.7654
+        },
+        {
+          "id": 260,
+          "parent_id": 259,
+          "depth": 4,
+          "x": 10.54,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_1h",
+          "threshold": 80.0,
+          "samples": 16,
+          "impurity": 131.4711
+        },
+        {
+          "id": 283,
+          "parent_id": 259,
+          "depth": 4,
+          "x": 12.29,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "rolling_std_3h",
+          "threshold": 16.94,
+          "samples": 4,
+          "impurity": 150.64
+        },
+        {
+          "id": 290,
+          "parent_id": 0,
+          "depth": 1,
+          "x": 15.5,
+          "y": 4.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_1h",
+          "threshold": 278.5,
+          "samples": 1463,
+          "impurity": 3822.0192
+        },
+        {
+          "id": 291,
+          "parent_id": 290,
+          "depth": 2,
+          "x": 13.75,
+          "y": 2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_24h",
+          "threshold": 265.5,
+          "samples": 860,
+          "impurity": 2565.9466
+        },
+        {
+          "id": 292,
+          "parent_id": 291,
+          "depth": 3,
+          "x": 12.58,
+          "y": 0.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "cos_dow",
+          "threshold": 0.81,
+          "samples": 591,
+          "impurity": 1859.7378
+        },
+        {
+          "id": 293,
+          "parent_id": 292,
+          "depth": 4,
+          "x": 11.71,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_1h",
+          "threshold": 110.0,
+          "samples": 534,
+          "impurity": 1446.8376
+        },
+        {
+          "id": 348,
+          "parent_id": 292,
+          "depth": 4,
+          "x": 13.46,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_1h",
+          "threshold": 191.0,
+          "samples": 57,
+          "impurity": 964.1017
+        },
+        {
+          "id": 387,
+          "parent_id": 291,
+          "depth": 3,
+          "x": 14.92,
+          "y": 0.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "sin_dow",
+          "threshold": 0.0,
+          "samples": 269,
+          "impurity": 1395.4734
+        },
+        {
+          "id": 388,
+          "parent_id": 387,
+          "depth": 4,
+          "x": 14.04,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "rolling_mean_6h",
+          "threshold": 286.17,
+          "samples": 140,
+          "impurity": 857.1338
+        },
+        {
+          "id": 429,
+          "parent_id": 387,
+          "depth": 4,
+          "x": 15.79,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "hour",
+          "threshold": 9.5,
+          "samples": 129,
+          "impurity": 654.4434
+        },
+        {
+          "id": 456,
+          "parent_id": 290,
+          "depth": 2,
+          "x": 17.25,
+          "y": 2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_24h",
+          "threshold": 281.5,
+          "samples": 603,
+          "impurity": 1560.6883
+        },
+        {
+          "id": 457,
+          "parent_id": 456,
+          "depth": 3,
+          "x": 16.08,
+          "y": 0.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "cos_dow",
+          "threshold": 0.81,
+          "samples": 219,
+          "impurity": 1804.3969
+        },
+        {
+          "id": 458,
+          "parent_id": 457,
+          "depth": 4,
+          "x": 15.21,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_24h",
+          "threshold": 200.0,
+          "samples": 120,
+          "impurity": 969.5802
+        },
+        {
+          "id": 497,
+          "parent_id": 457,
+          "depth": 4,
+          "x": 16.96,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_24h",
+          "threshold": 209.5,
+          "samples": 99,
+          "impurity": 1117.6019
+        },
+        {
+          "id": 540,
+          "parent_id": 456,
+          "depth": 3,
+          "x": 18.42,
+          "y": 0.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "lag_1h",
+          "threshold": 341.5,
+          "samples": 384,
+          "impurity": 615.861
+        },
+        {
+          "id": 541,
+          "parent_id": 540,
+          "depth": 4,
+          "x": 17.54,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "cos_dow",
+          "threshold": 0.2,
+          "samples": 223,
+          "impurity": 714.4325
+        },
+        {
+          "id": 588,
+          "parent_id": 540,
+          "depth": 4,
+          "x": 19.29,
+          "y": -2.0,
+          "z": 0.0,
+          "is_leaf": false,
+          "feature": "is_exam_period",
+          "threshold": 0.5,
+          "samples": 161,
+          "impurity": 127.7725
+        }
+      ]
+    }
+  ],
+  "regression_surface_3d": {
+    "x_label": "Hour of Day (7 - 23)",
+    "y_label": "Lag 1h Occupancy",
+    "z_label": "Predicted Occupancy",
+    "plane_points": [
+      {
+        "x": 7.0,
+        "y": 50.0,
+        "z": 24.2
+      },
+      {
+        "x": 8.8,
+        "y": 50.0,
+        "z": 18.4
+      },
+      {
+        "x": 10.6,
+        "y": 50.0,
+        "z": 12.6
+      },
+      {
+        "x": 12.3,
+        "y": 50.0,
+        "z": 6.8
+      },
+      {
+        "x": 14.1,
+        "y": 50.0,
+        "z": 0.9
+      },
+      {
+        "x": 15.9,
+        "y": 50.0,
+        "z": -4.9
+      },
+      {
+        "x": 17.7,
+        "y": 50.0,
+        "z": -10.7
+      },
+      {
+        "x": 19.4,
+        "y": 50.0,
+        "z": -16.5
+      },
+      {
+        "x": 21.2,
+        "y": 50.0,
+        "z": -22.3
+      },
+      {
+        "x": 23.0,
+        "y": 50.0,
+        "z": -28.1
+      },
+      {
+        "x": 7.0,
+        "y": 80.0,
+        "z": -6.0
+      },
+      {
+        "x": 8.8,
+        "y": 80.0,
+        "z": -11.8
+      },
+      {
+        "x": 10.6,
+        "y": 80.0,
+        "z": -17.6
+      },
+      {
+        "x": 12.3,
+        "y": 80.0,
+        "z": -23.4
+      },
+      {
+        "x": 14.1,
+        "y": 80.0,
+        "z": -29.3
+      },
+      {
+        "x": 15.9,
+        "y": 80.0,
+        "z": -35.1
+      },
+      {
+        "x": 17.7,
+        "y": 80.0,
+        "z": -40.9
+      },
+      {
+        "x": 19.4,
+        "y": 80.0,
+        "z": -46.7
+      },
+      {
+        "x": 21.2,
+        "y": 80.0,
+        "z": -52.5
+      },
+      {
+        "x": 23.0,
+        "y": 80.0,
+        "z": -58.3
+      },
+      {
+        "x": 7.0,
+        "y": 110.0,
+        "z": -36.2
+      },
+      {
+        "x": 8.8,
+        "y": 110.0,
+        "z": -42.0
+      },
+      {
+        "x": 10.6,
+        "y": 110.0,
+        "z": -47.8
+      },
+      {
+        "x": 12.3,
+        "y": 110.0,
+        "z": -53.7
+      },
+      {
+        "x": 14.1,
+        "y": 110.0,
+        "z": -59.5
+      },
+      {
+        "x": 15.9,
+        "y": 110.0,
+        "z": -65.3
+      },
+      {
+        "x": 17.7,
+        "y": 110.0,
+        "z": -71.1
+      },
+      {
+        "x": 19.4,
+        "y": 110.0,
+        "z": -76.9
+      },
+      {
+        "x": 21.2,
+        "y": 110.0,
+        "z": -82.7
+      },
+      {
+        "x": 23.0,
+        "y": 110.0,
+        "z": -88.6
+      },
+      {
+        "x": 7.0,
+        "y": 140.0,
+        "z": -66.4
+      },
+      {
+        "x": 8.8,
+        "y": 140.0,
+        "z": -72.2
+      },
+      {
+        "x": 10.6,
+        "y": 140.0,
+        "z": -78.0
+      },
+      {
+        "x": 12.3,
+        "y": 140.0,
+        "z": -83.9
+      },
+      {
+        "x": 14.1,
+        "y": 140.0,
+        "z": -89.7
+      },
+      {
+        "x": 15.9,
+        "y": 140.0,
+        "z": -95.5
+      },
+      {
+        "x": 17.7,
+        "y": 140.0,
+        "z": -101.3
+      },
+      {
+        "x": 19.4,
+        "y": 140.0,
+        "z": -107.1
+      },
+      {
+        "x": 21.2,
+        "y": 140.0,
+        "z": -112.9
+      },
+      {
+        "x": 23.0,
+        "y": 140.0,
+        "z": -118.8
+      },
+      {
+        "x": 7.0,
+        "y": 170.0,
+        "z": -96.6
+      },
+      {
+        "x": 8.8,
+        "y": 170.0,
+        "z": -102.4
+      },
+      {
+        "x": 10.6,
+        "y": 170.0,
+        "z": -108.3
+      },
+      {
+        "x": 12.3,
+        "y": 170.0,
+        "z": -114.1
+      },
+      {
+        "x": 14.1,
+        "y": 170.0,
+        "z": -119.9
+      },
+      {
+        "x": 15.9,
+        "y": 170.0,
+        "z": -125.7
+      },
+      {
+        "x": 17.7,
+        "y": 170.0,
+        "z": -131.5
+      },
+      {
+        "x": 19.4,
+        "y": 170.0,
+        "z": -137.3
+      },
+      {
+        "x": 21.2,
+        "y": 170.0,
+        "z": -143.2
+      },
+      {
+        "x": 23.0,
+        "y": 170.0,
+        "z": -149.0
+      },
+      {
+        "x": 7.0,
+        "y": 200.0,
+        "z": -126.8
+      },
+      {
+        "x": 8.8,
+        "y": 200.0,
+        "z": -132.7
+      },
+      {
+        "x": 10.6,
+        "y": 200.0,
+        "z": -138.5
+      },
+      {
+        "x": 12.3,
+        "y": 200.0,
+        "z": -144.3
+      },
+      {
+        "x": 14.1,
+        "y": 200.0,
+        "z": -150.1
+      },
+      {
+        "x": 15.9,
+        "y": 200.0,
+        "z": -155.9
+      },
+      {
+        "x": 17.7,
+        "y": 200.0,
+        "z": -161.7
+      },
+      {
+        "x": 19.4,
+        "y": 200.0,
+        "z": -167.6
+      },
+      {
+        "x": 21.2,
+        "y": 200.0,
+        "z": -173.4
+      },
+      {
+        "x": 23.0,
+        "y": 200.0,
+        "z": -179.2
+      },
+      {
+        "x": 7.0,
+        "y": 230.0,
+        "z": -157.0
+      },
+      {
+        "x": 8.8,
+        "y": 230.0,
+        "z": -162.9
+      },
+      {
+        "x": 10.6,
+        "y": 230.0,
+        "z": -168.7
+      },
+      {
+        "x": 12.3,
+        "y": 230.0,
+        "z": -174.5
+      },
+      {
+        "x": 14.1,
+        "y": 230.0,
+        "z": -180.3
+      },
+      {
+        "x": 15.9,
+        "y": 230.0,
+        "z": -186.1
+      },
+      {
+        "x": 17.7,
+        "y": 230.0,
+        "z": -191.9
+      },
+      {
+        "x": 19.4,
+        "y": 230.0,
+        "z": -197.8
+      },
+      {
+        "x": 21.2,
+        "y": 230.0,
+        "z": -203.6
+      },
+      {
+        "x": 23.0,
+        "y": 230.0,
+        "z": -209.4
+      },
+      {
+        "x": 7.0,
+        "y": 260.0,
+        "z": -187.3
+      },
+      {
+        "x": 8.8,
+        "y": 260.0,
+        "z": -193.1
+      },
+      {
+        "x": 10.6,
+        "y": 260.0,
+        "z": -198.9
+      },
+      {
+        "x": 12.3,
+        "y": 260.0,
+        "z": -204.7
+      },
+      {
+        "x": 14.1,
+        "y": 260.0,
+        "z": -210.5
+      },
+      {
+        "x": 15.9,
+        "y": 260.0,
+        "z": -216.3
+      },
+      {
+        "x": 17.7,
+        "y": 260.0,
+        "z": -222.2
+      },
+      {
+        "x": 19.4,
+        "y": 260.0,
+        "z": -228.0
+      },
+      {
+        "x": 21.2,
+        "y": 260.0,
+        "z": -233.8
+      },
+      {
+        "x": 23.0,
+        "y": 260.0,
+        "z": -239.6
+      },
+      {
+        "x": 7.0,
+        "y": 290.0,
+        "z": -217.5
+      },
+      {
+        "x": 8.8,
+        "y": 290.0,
+        "z": -223.3
+      },
+      {
+        "x": 10.6,
+        "y": 290.0,
+        "z": -229.1
+      },
+      {
+        "x": 12.3,
+        "y": 290.0,
+        "z": -234.9
+      },
+      {
+        "x": 14.1,
+        "y": 290.0,
+        "z": -240.7
+      },
+      {
+        "x": 15.9,
+        "y": 290.0,
+        "z": -246.5
+      },
+      {
+        "x": 17.7,
+        "y": 290.0,
+        "z": -252.4
+      },
+      {
+        "x": 19.4,
+        "y": 290.0,
+        "z": -258.2
+      },
+      {
+        "x": 21.2,
+        "y": 290.0,
+        "z": -264.0
+      },
+      {
+        "x": 23.0,
+        "y": 290.0,
+        "z": -269.8
+      },
+      {
+        "x": 7.0,
+        "y": 320.0,
+        "z": -247.7
+      },
+      {
+        "x": 8.8,
+        "y": 320.0,
+        "z": -253.5
+      },
+      {
+        "x": 10.6,
+        "y": 320.0,
+        "z": -259.3
+      },
+      {
+        "x": 12.3,
+        "y": 320.0,
+        "z": -265.1
+      },
+      {
+        "x": 14.1,
+        "y": 320.0,
+        "z": -270.9
+      },
+      {
+        "x": 15.9,
+        "y": 320.0,
+        "z": -276.8
+      },
+      {
+        "x": 17.7,
+        "y": 320.0,
+        "z": -282.6
+      },
+      {
+        "x": 19.4,
+        "y": 320.0,
+        "z": -288.4
+      },
+      {
+        "x": 21.2,
+        "y": 320.0,
+        "z": -294.2
+      },
+      {
+        "x": 23.0,
+        "y": 320.0,
+        "z": -300.0
+      }
+    ]
+  },
+  "data_points_3d": [
+    {
+      "x": 1.0,
+      "y": 4.79,
+      "z": 7.66,
+      "actual_occupancy": 343,
+      "hour": 16,
+      "exam_flag": 0
+    },
+    {
+      "x": 6.0,
+      "y": 2.82,
+      "z": 6.98,
+      "actual_occupancy": 278,
+      "hour": 21,
+      "exam_flag": 0
+    },
+    {
+      "x": 0.0,
+      "y": 4.79,
+      "z": 7.66,
+      "actual_occupancy": 343,
+      "hour": 15,
+      "exam_flag": 0
+    },
+    {
+      "x": 6.0,
+      "y": 2.27,
+      "z": 5.87,
+      "actual_occupancy": 260,
+      "hour": 21,
+      "exam_flag": 0
+    },
+    {
+      "x": -7.0,
+      "y": -4.45,
+      "z": -8.1,
+      "actual_occupancy": 38,
+      "hour": 8,
+      "exam_flag": 0
+    },
+    {
+      "x": 1.0,
+      "y": 0.76,
+      "z": 1.41,
+      "actual_occupancy": 210,
+      "hour": 16,
+      "exam_flag": 0
+    },
+    {
+      "x": 2.0,
+      "y": 3.7,
+      "z": 7.66,
+      "actual_occupancy": 307,
+      "hour": 17,
+      "exam_flag": 0
+    },
+    {
+      "x": 2.0,
+      "y": 0.39,
+      "z": 0.19,
+      "actual_occupancy": 198,
+      "hour": 17,
+      "exam_flag": 0
+    },
+    {
+      "x": -3.0,
+      "y": 0.85,
+      "z": 1.36,
+      "actual_occupancy": 213,
+      "hour": 12,
+      "exam_flag": 0
+    },
+    {
+      "x": 2.0,
+      "y": 4.79,
+      "z": 7.66,
+      "actual_occupancy": 343,
+      "hour": 17,
+      "exam_flag": 1
+    },
+    {
+      "x": 4.0,
+      "y": 2.55,
+      "z": 2.76,
+      "actual_occupancy": 269,
+      "hour": 19,
+      "exam_flag": 0
+    },
+    {
+      "x": 0.0,
+      "y": 4.73,
+      "z": 7.13,
+      "actual_occupancy": 341,
+      "hour": 15,
+      "exam_flag": 0
+    },
+    {
+      "x": 7.0,
+      "y": -0.42,
+      "z": 4.65,
+      "actual_occupancy": 171,
+      "hour": 22,
+      "exam_flag": 0
+    },
+    {
+      "x": -4.0,
+      "y": 3.0,
+      "z": 2.62,
+      "actual_occupancy": 284,
+      "hour": 11,
+      "exam_flag": 0
+    },
+    {
+      "x": 4.0,
+      "y": 4.79,
+      "z": 7.66,
+      "actual_occupancy": 343,
+      "hour": 19,
+      "exam_flag": 1
+    },
+    {
+      "x": 1.0,
+      "y": 4.79,
+      "z": 7.66,
+      "actual_occupancy": 343,
+      "hour": 16,
+      "exam_flag": 1
+    },
+    {
+      "x": -2.0,
+      "y": 4.79,
+      "z": 7.66,
+      "actual_occupancy": 343,
+      "hour": 13,
+      "exam_flag": 1
+    },
+    {
+      "x": -1.0,
+      "y": 4.79,
+      "z": 7.52,
+      "actual_occupancy": 343,
+      "hour": 14,
+      "exam_flag": 1
+    },
+    {
+      "x": -1.0,
+      "y": -2.94,
+      "z": -4.22,
+      "actual_occupancy": 88,
+      "hour": 14,
+      "exam_flag": 0
+    },
+    {
+      "x": -5.0,
+      "y": -1.03,
+      "z": -4.51,
+      "actual_occupancy": 151,
+      "hour": 10,
+      "exam_flag": 0
+    },
+    {
+      "x": 7.0,
+      "y": -1.55,
+      "z": 0.44,
+      "actual_occupancy": 134,
+      "hour": 22,
+      "exam_flag": 0
+    },
+    {
+      "x": -3.0,
+      "y": 2.18,
+      "z": 3.78,
+      "actual_occupancy": 257,
+      "hour": 12,
+      "exam_flag": 0
+    },
+    {
+      "x": 2.0,
+      "y": -3.79,
+      "z": -4.9,
+      "actual_occupancy": 60,
+      "hour": 17,
+      "exam_flag": 0
+    },
+    {
+      "x": -5.0,
+      "y": 1.58,
+      "z": -1.45,
+      "actual_occupancy": 237,
+      "hour": 10,
+      "exam_flag": 0
+    },
+    {
+      "x": 6.0,
+      "y": 0.39,
+      "z": 1.26,
+      "actual_occupancy": 198,
+      "hour": 21,
+      "exam_flag": 0
+    },
+    {
+      "x": 8.0,
+      "y": -3.94,
+      "z": 0.63,
+      "actual_occupancy": 55,
+      "hour": 23,
+      "exam_flag": 0
+    },
+    {
+      "x": 3.0,
+      "y": 2.7,
+      "z": 6.11,
+      "actual_occupancy": 274,
+      "hour": 18,
+      "exam_flag": 1
+    },
+    {
+      "x": 1.0,
+      "y": 4.79,
+      "z": 7.66,
+      "actual_occupancy": 343,
+      "hour": 16,
+      "exam_flag": 1
+    },
+    {
+      "x": 0.0,
+      "y": 2.76,
+      "z": 3.39,
+      "actual_occupancy": 276,
+      "hour": 15,
+      "exam_flag": 0
+    },
+    {
+      "x": 5.0,
+      "y": 4.79,
+      "z": 7.66,
+      "actual_occupancy": 343,
+      "hour": 20,
+      "exam_flag": 1
+    },
+    {
+      "x": -5.0,
+      "y": -3.67,
+      "z": -8.1,
+      "actual_occupancy": 64,
+      "hour": 10,
+      "exam_flag": 0
+    },
+    {
+      "x": 2.0,
+      "y": 2.88,
+      "z": 6.3,
+      "actual_occupancy": 280,
+      "hour": 17,
+      "exam_flag": 0
+    },
+    {
+      "x": -1.0,
+      "y": 4.79,
+      "z": 7.66,
+      "actual_occupancy": 343,
+      "hour": 14,
+      "exam_flag": 1
+    },
+    {
+      "x": -8.0,
+      "y": -3.88,
+      "z": -3.15,
+      "actual_occupancy": 57,
+      "hour": 7,
+      "exam_flag": 1
+    },
+    {
+      "x": 4.0,
+      "y": 0.42,
+      "z": -0.24,
+      "actual_occupancy": 199,
+      "hour": 19,
+      "exam_flag": 0
+    },
+    {
+      "x": -6.0,
+      "y": -1.79,
+      "z": -5.43,
+      "actual_occupancy": 126,
+      "hour": 9,
+      "exam_flag": 0
+    },
+    {
+      "x": -6.0,
+      "y": -1.12,
+      "z": -5.77,
+      "actual_occupancy": 148,
+      "hour": 9,
+      "exam_flag": 0
+    },
+    {
+      "x": -4.0,
+      "y": 1.06,
+      "z": -0.1,
+      "actual_occupancy": 220,
+      "hour": 11,
+      "exam_flag": 0
+    },
+    {
+      "x": 1.0,
+      "y": 4.79,
+      "z": 7.66,
+      "actual_occupancy": 343,
+      "hour": 16,
+      "exam_flag": 0
+    },
+    {
+      "x": 6.0,
+      "y": 2.42,
+      "z": 6.69,
+      "actual_occupancy": 265,
+      "hour": 21,
+      "exam_flag": 0
+    },
+    {
+      "x": 8.0,
+      "y": -5.06,
+      "z": -7.61,
+      "actual_occupancy": 18,
+      "hour": 23,
+      "exam_flag": 0
+    },
+    {
+      "x": -3.0,
+      "y": 0.91,
+      "z": 5.77,
+      "actual_occupancy": 215,
+      "hour": 12,
+      "exam_flag": 0
+    },
+    {
+      "x": -8.0,
+      "y": -4.39,
+      "z": -4.51,
+      "actual_occupancy": 40,
+      "hour": 7,
+      "exam_flag": 1
+    },
+    {
+      "x": -7.0,
+      "y": -2.15,
+      "z": -6.06,
+      "actual_occupancy": 114,
+      "hour": 8,
+      "exam_flag": 1
+    },
+    {
+      "x": 7.0,
+      "y": -2.58,
+      "z": 0.24,
+      "actual_occupancy": 100,
+      "hour": 22,
+      "exam_flag": 0
+    },
+    {
+      "x": 0.0,
+      "y": 4.79,
+      "z": 7.66,
+      "actual_occupancy": 343,
+      "hour": 15,
+      "exam_flag": 1
+    },
+    {
+      "x": 3.0,
+      "y": -4.55,
+      "z": -5.67,
+      "actual_occupancy": 35,
+      "hour": 18,
+      "exam_flag": 0
+    },
+    {
+      "x": -6.0,
+      "y": -0.67,
+      "z": -5.24,
+      "actual_occupancy": 163,
+      "hour": 9,
+      "exam_flag": 0
+    },
+    {
+      "x": 5.0,
+      "y": 3.24,
+      "z": 5.14,
+      "actual_occupancy": 292,
+      "hour": 20,
+      "exam_flag": 0
+    },
+    {
+      "x": 7.0,
+      "y": -0.21,
+      "z": 5.67,
+      "actual_occupancy": 178,
+      "hour": 22,
+      "exam_flag": 0
+    },
+    {
+      "x": -1.0,
+      "y": 1.82,
+      "z": 1.94,
+      "actual_occupancy": 245,
+      "hour": 14,
+      "exam_flag": 0
+    },
+    {
+      "x": 6.0,
+      "y": -0.42,
+      "z": -0.05,
+      "actual_occupancy": 171,
+      "hour": 21,
+      "exam_flag": 0
+    },
+    {
+      "x": -4.0,
+      "y": 1.88,
+      "z": 2.57,
+      "actual_occupancy": 247,
+      "hour": 11,
+      "exam_flag": 1
+    },
+    {
+      "x": 2.0,
+      "y": 1.0,
+      "z": 2.81,
+      "actual_occupancy": 218,
+      "hour": 17,
+      "exam_flag": 0
+    },
+    {
+      "x": -6.0,
+      "y": -1.73,
+      "z": -6.06,
+      "actual_occupancy": 128,
+      "hour": 9,
+      "exam_flag": 0
+    },
+    {
+      "x": 4.0,
+      "y": 1.06,
+      "z": 0.39,
+      "actual_occupancy": 220,
+      "hour": 19,
+      "exam_flag": 0
+    },
+    {
+      "x": -6.0,
+      "y": -0.3,
+      "z": -3.68,
+      "actual_occupancy": 175,
+      "hour": 9,
+      "exam_flag": 1
+    },
+    {
+      "x": 4.0,
+      "y": 4.58,
+      "z": 2.33,
+      "actual_occupancy": 336,
+      "hour": 19,
+      "exam_flag": 0
+    },
+    {
+      "x": 2.0,
+      "y": 4.79,
+      "z": 7.66,
+      "actual_occupancy": 343,
+      "hour": 17,
+      "exam_flag": 1
+    },
+    {
+      "x": -2.0,
+      "y": 2.64,
+      "z": 2.91,
+      "actual_occupancy": 272,
+      "hour": 13,
+      "exam_flag": 0
+    },
+    {
+      "x": 7.0,
+      "y": -0.09,
+      "z": 3.88,
+      "actual_occupancy": 182,
+      "hour": 22,
+      "exam_flag": 0
+    },
+    {
+      "x": 5.0,
+      "y": 4.79,
+      "z": 7.66,
+      "actual_occupancy": 343,
+      "hour": 20,
+      "exam_flag": 1
+    },
+    {
+      "x": -4.0,
+      "y": 3.33,
+      "z": 4.46,
+      "actual_occupancy": 295,
+      "hour": 11,
+      "exam_flag": 1
+    },
+    {
+      "x": -2.0,
+      "y": 1.91,
+      "z": 2.67,
+      "actual_occupancy": 248,
+      "hour": 13,
+      "exam_flag": 1
+    },
+    {
+      "x": -7.0,
+      "y": -3.79,
+      "z": -8.1,
+      "actual_occupancy": 60,
+      "hour": 8,
+      "exam_flag": 0
+    },
+    {
+      "x": -2.0,
+      "y": 0.15,
+      "z": -0.34,
+      "actual_occupancy": 190,
+      "hour": 13,
+      "exam_flag": 0
+    },
+    {
+      "x": -2.0,
+      "y": 0.73,
+      "z": 1.36,
+      "actual_occupancy": 209,
+      "hour": 13,
+      "exam_flag": 0
+    },
+    {
+      "x": 3.0,
+      "y": 4.79,
+      "z": 7.66,
+      "actual_occupancy": 343,
+      "hour": 18,
+      "exam_flag": 1
+    },
+    {
+      "x": 2.0,
+      "y": 1.33,
+      "z": 3.59,
+      "actual_occupancy": 229,
+      "hour": 17,
+      "exam_flag": 0
+    },
+    {
+      "x": -6.0,
+      "y": -2.09,
+      "z": -5.04,
+      "actual_occupancy": 116,
+      "hour": 9,
+      "exam_flag": 0
+    },
+    {
+      "x": -5.0,
+      "y": 3.91,
+      "z": 2.52,
+      "actual_occupancy": 314,
+      "hour": 10,
+      "exam_flag": 1
+    },
+    {
+      "x": 1.0,
+      "y": 3.91,
+      "z": 6.06,
+      "actual_occupancy": 314,
+      "hour": 16,
+      "exam_flag": 1
+    },
+    {
+      "x": 0.0,
+      "y": 4.48,
+      "z": 5.33,
+      "actual_occupancy": 333,
+      "hour": 15,
+      "exam_flag": 0
+    },
+    {
+      "x": -4.0,
+      "y": 3.36,
+      "z": 2.57,
+      "actual_occupancy": 296,
+      "hour": 11,
+      "exam_flag": 0
+    },
+    {
+      "x": -1.0,
+      "y": 2.82,
+      "z": 4.22,
+      "actual_occupancy": 278,
+      "hour": 14,
+      "exam_flag": 0
+    },
+    {
+      "x": -4.0,
+      "y": -3.58,
+      "z": -7.27,
+      "actual_occupancy": 67,
+      "hour": 11,
+      "exam_flag": 0
+    },
+    {
+      "x": 2.0,
+      "y": 4.79,
+      "z": 7.66,
+      "actual_occupancy": 343,
+      "hour": 17,
+      "exam_flag": 1
+    },
+    {
+      "x": -8.0,
+      "y": -5.0,
+      "z": -8.1,
+      "actual_occupancy": 20,
+      "hour": 7,
+      "exam_flag": 0
+    },
+    {
+      "x": 3.0,
+      "y": 2.21,
+      "z": 4.8,
+      "actual_occupancy": 258,
+      "hour": 18,
+      "exam_flag": 0
+    },
+    {
+      "x": 5.0,
+      "y": 4.36,
+      "z": 6.4,
+      "actual_occupancy": 329,
+      "hour": 20,
+      "exam_flag": 0
+    },
+    {
+      "x": 1.0,
+      "y": 0.12,
+      "z": 0.97,
+      "actual_occupancy": 189,
+      "hour": 16,
+      "exam_flag": 0
+    },
+    {
+      "x": -7.0,
+      "y": -2.09,
+      "z": -6.69,
+      "actual_occupancy": 116,
+      "hour": 8,
+      "exam_flag": 1
+    },
+    {
+      "x": 3.0,
+      "y": 0.24,
+      "z": 1.6,
+      "actual_occupancy": 193,
+      "hour": 18,
+      "exam_flag": 0
+    },
+    {
+      "x": 3.0,
+      "y": 1.55,
+      "z": 6.55,
+      "actual_occupancy": 236,
+      "hour": 18,
+      "exam_flag": 0
+    },
+    {
+      "x": -4.0,
+      "y": 0.42,
+      "z": -1.65,
+      "actual_occupancy": 199,
+      "hour": 11,
+      "exam_flag": 0
+    },
+    {
+      "x": 6.0,
+      "y": 0.79,
+      "z": 3.35,
+      "actual_occupancy": 211,
+      "hour": 21,
+      "exam_flag": 0
+    },
+    {
+      "x": 5.0,
+      "y": 3.39,
+      "z": 5.28,
+      "actual_occupancy": 297,
+      "hour": 20,
+      "exam_flag": 0
+    },
+    {
+      "x": 1.0,
+      "y": 4.76,
+      "z": 7.66,
+      "actual_occupancy": 342,
+      "hour": 16,
+      "exam_flag": 0
+    },
+    {
+      "x": -5.0,
+      "y": -0.03,
+      "z": -2.81,
+      "actual_occupancy": 184,
+      "hour": 10,
+      "exam_flag": 0
+    },
+    {
+      "x": -7.0,
+      "y": -3.03,
+      "z": -7.71,
+      "actual_occupancy": 85,
+      "hour": 8,
+      "exam_flag": 0
+    },
+    {
+      "x": 0.0,
+      "y": 4.61,
+      "z": 7.66,
+      "actual_occupancy": 337,
+      "hour": 15,
+      "exam_flag": 1
+    },
+    {
+      "x": -2.0,
+      "y": 1.94,
+      "z": -0.05,
+      "actual_occupancy": 249,
+      "hour": 13,
+      "exam_flag": 0
+    },
+    {
+      "x": 3.0,
+      "y": 2.39,
+      "z": 4.56,
+      "actual_occupancy": 264,
+      "hour": 18,
+      "exam_flag": 0
+    },
+    {
+      "x": 8.0,
+      "y": -2.76,
+      "z": -1.55,
+      "actual_occupancy": 94,
+      "hour": 23,
+      "exam_flag": 0
+    },
+    {
+      "x": -1.0,
+      "y": 1.39,
+      "z": 2.96,
+      "actual_occupancy": 231,
+      "hour": 14,
+      "exam_flag": 0
+    },
+    {
+      "x": 4.0,
+      "y": 4.79,
+      "z": 7.66,
+      "actual_occupancy": 343,
+      "hour": 19,
+      "exam_flag": 1
+    },
+    {
+      "x": -3.0,
+      "y": -0.21,
+      "z": 0.92,
+      "actual_occupancy": 178,
+      "hour": 12,
+      "exam_flag": 0
+    },
+    {
+      "x": 3.0,
+      "y": 1.48,
+      "z": 4.95,
+      "actual_occupancy": 234,
+      "hour": 18,
+      "exam_flag": 1
+    },
+    {
+      "x": 8.0,
+      "y": -3.82,
+      "z": -1.16,
+      "actual_occupancy": 59,
+      "hour": 23,
+      "exam_flag": 0
+    },
+    {
+      "x": -2.0,
+      "y": 3.42,
+      "z": 3.83,
+      "actual_occupancy": 298,
+      "hour": 13,
+      "exam_flag": 0
+    },
+    {
+      "x": -8.0,
+      "y": -4.3,
+      "z": -4.61,
+      "actual_occupancy": 43,
+      "hour": 7,
+      "exam_flag": 0
+    },
+    {
+      "x": -2.0,
+      "y": 2.79,
+      "z": 2.62,
+      "actual_occupancy": 277,
+      "hour": 13,
+      "exam_flag": 0
+    },
+    {
+      "x": 8.0,
+      "y": -1.97,
+      "z": -0.19,
+      "actual_occupancy": 120,
+      "hour": 23,
+      "exam_flag": 1
+    },
+    {
+      "x": 0.0,
+      "y": 1.55,
+      "z": 3.39,
+      "actual_occupancy": 236,
+      "hour": 15,
+      "exam_flag": 0
+    },
+    {
+      "x": -1.0,
+      "y": 4.79,
+      "z": 4.8,
+      "actual_occupancy": 343,
+      "hour": 14,
+      "exam_flag": 0
+    },
+    {
+      "x": 5.0,
+      "y": 0.45,
+      "z": 0.97,
+      "actual_occupancy": 200,
+      "hour": 20,
+      "exam_flag": 0
+    },
+    {
+      "x": -3.0,
+      "y": 2.85,
+      "z": 4.99,
+      "actual_occupancy": 279,
+      "hour": 12,
+      "exam_flag": 0
+    },
+    {
+      "x": 1.0,
+      "y": 2.24,
+      "z": 3.39,
+      "actual_occupancy": 259,
+      "hour": 16,
+      "exam_flag": 0
+    },
+    {
+      "x": 1.0,
+      "y": 4.36,
+      "z": 7.66,
+      "actual_occupancy": 329,
+      "hour": 16,
+      "exam_flag": 1
+    },
+    {
+      "x": -2.0,
+      "y": 3.61,
+      "z": 3.88,
+      "actual_occupancy": 304,
+      "hour": 13,
+      "exam_flag": 0
+    },
+    {
+      "x": 7.0,
+      "y": -1.3,
+      "z": 0.63,
+      "actual_occupancy": 142,
+      "hour": 22,
+      "exam_flag": 0
+    },
+    {
+      "x": -4.0,
+      "y": 3.61,
+      "z": 2.33,
+      "actual_occupancy": 304,
+      "hour": 11,
+      "exam_flag": 0
+    },
+    {
+      "x": -1.0,
+      "y": 4.7,
+      "z": 4.02,
+      "actual_occupancy": 340,
+      "hour": 14,
+      "exam_flag": 0
+    },
+    {
+      "x": 6.0,
+      "y": 0.36,
+      "z": 1.36,
+      "actual_occupancy": 197,
+      "hour": 21,
+      "exam_flag": 0
+    },
+    {
+      "x": 4.0,
+      "y": -2.76,
+      "z": -7.71,
+      "actual_occupancy": 94,
+      "hour": 19,
+      "exam_flag": 0
+    },
+    {
+      "x": -8.0,
+      "y": -4.39,
+      "z": -5.77,
+      "actual_occupancy": 40,
+      "hour": 7,
+      "exam_flag": 0
+    },
+    {
+      "x": -3.0,
+      "y": -3.61,
+      "z": -5.77,
+      "actual_occupancy": 66,
+      "hour": 12,
+      "exam_flag": 0
+    },
+    {
+      "x": 7.0,
+      "y": 2.73,
+      "z": 7.66,
+      "actual_occupancy": 275,
+      "hour": 22,
+      "exam_flag": 1
+    },
+    {
+      "x": -6.0,
+      "y": -0.27,
+      "z": -3.78,
+      "actual_occupancy": 176,
+      "hour": 9,
+      "exam_flag": 0
+    },
+    {
+      "x": 2.0,
+      "y": 2.55,
+      "z": 6.21,
+      "actual_occupancy": 269,
+      "hour": 17,
+      "exam_flag": 1
+    }
+  ],
+  "xgboost_stages": [
+    {
+      "stage": 0,
+      "weight_scale": 0.08,
+      "tree_summary": "Boosting Iteration 1: Focuses on residual error from Stage 0"
+    },
+    {
+      "stage": 1,
+      "weight_scale": 0.076,
+      "tree_summary": "Boosting Iteration 2: Focuses on residual error from Stage 1"
+    },
+    {
+      "stage": 2,
+      "weight_scale": 0.0722,
+      "tree_summary": "Boosting Iteration 3: Focuses on residual error from Stage 2"
+    },
+    {
+      "stage": 3,
+      "weight_scale": 0.0686,
+      "tree_summary": "Boosting Iteration 4: Focuses on residual error from Stage 3"
+    }
+  ]
+}
