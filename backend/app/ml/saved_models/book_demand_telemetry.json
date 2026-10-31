@@ -1,0 +1,87 @@
+{
+  "trained_at": "2026-11-10T07:16:54.621481",
+  "mae": 0.003,
+  "r2": 0.999,
+  "feature_importances": {
+    "total_copies": 0.0031,
+    "available_copies": 0.7136,
+    "borrow_count_recent": 0.2831,
+    "return_frequency_days": 0.0,
+    "is_exam_week": 0.0,
+    "semester_week": 0.0
+  },
+  "top_demand_books": [
+    {
+      "title": "Deep Learning: Foundations and Frontiers",
+      "category": "Artificial Intelligence",
+      "copies": 6,
+      "borrow_recent": 18,
+      "predicted_demand": 0.94,
+      "shortage_risk": "HIGH",
+      "recommended_acquisitions": 4
+    },
+    {
+      "title": "Designing Data-Intensive Applications",
+      "category": "Computer Science",
+      "copies": 8,
+      "borrow_recent": 22,
+      "predicted_demand": 0.92,
+      "shortage_risk": "HIGH",
+      "recommended_acquisitions": 5
+    },
+    {
+      "title": "Introduction to Algorithms (CLRS 4th Ed)",
+      "category": "Computer Science",
+      "copies": 10,
+      "borrow_recent": 24,
+      "predicted_demand": 0.89,
+      "shortage_risk": "MEDIUM",
+      "recommended_acquisitions": 3
+    },
+    {
+      "title": "Quantum Computation & Quantum Information",
+      "category": "Quantum Physics",
+      "copies": 4,
+      "borrow_recent": 9,
+      "predicted_demand": 0.81,
+      "shortage_risk": "MEDIUM",
+      "recommended_acquisitions": 2
+    },
+    {
+      "title": "Principles of Neural Science",
+      "category": "Neuroscience",
+      "copies": 5,
+      "borrow_recent": 11,
+      "predicted_demand": 0.78,
+      "shortage_risk": "MEDIUM",
+      "recommended_acquisitions": 2
+    },
+    {
+      "title": "Convex Optimization",
+      "category": "Mathematics",
+      "copies": 5,
+      "borrow_recent": 7,
+      "predicted_demand": 0.65,
+      "shortage_risk": "LOW",
+      "recommended_acquisitions": 0
+    },
+    {
+      "title": "Pattern Recognition and Machine Learning",
+      "category": "Artificial Intelligence",
+      "copies": 7,
+      "borrow_recent": 19,
+      "predicted_demand": 0.88,
+      "shortage_risk": "HIGH",
+      "recommended_acquisitions": 3
+    },
+    {
+      "title": "Statistical Inference & Monte Carlo Methods",
+      "category": "Mathematics",
+      "copies": 4,
+      "borrow_recent": 5,
+      "predicted_demand": 0.54,
+      "shortage_risk": "LOW",
+      "recommended_acquisitions": 0
+    }
+  ]
+}
